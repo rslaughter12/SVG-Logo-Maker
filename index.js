@@ -22,7 +22,7 @@ inquirer
       type: 'list',
       name: 'shape',
       message: 'What shape would you like your logo to be?',
-      choices: ['circle', 'rect', 'polygon'],
+      choices: ['circle', 'square', 'triangle'],
     },
   ])
   .then((answers) => {
@@ -38,16 +38,16 @@ inquirer
   
     if (answers.shape === "circle") {
       shapeElement = `<circle cx="50" cy="50" r="40" fill="${answers['shape-color']}" />`;
-    } else if (answers.shape === "rect") {
+    } else if (answers.shape === "square") {
       shapeElement = `<rect x="10" y="10" width="80" height="80" fill="${answers['shape-color']}" />`;
-    } else if (answers.shape === "polygon") {
+    } else if (answers.shape === "triangle") {
       shapeElement = `<polygon points="50,10 90,90 10,90" fill="${answers['shape-color']}" />`;
     }
   
     const svgCode = `
       <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
         ${shapeElement}
-        <text x="50" y="60" fill="${answers['text-color']}" font-size="18" text-anchor="middle">${answers.text}</text>
+        <text x="50" y="60" fill="${answers['text-color']}" font-size="22" text-anchor="middle">${answers.text}</text>
       </svg>`;
   
     fs.writeFile("logo.svg", svgCode, (err) => {
