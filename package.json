@@ -1,0 +1,21 @@
+{
+  "name": "svg",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "graceful-fs": "^4.2.11",
+    "inquirer": "^9.2.0",
+    "mysql2": "^3.2.4",
+    "require": "^0.4.4"
+  },
+  "description": ""
+}
